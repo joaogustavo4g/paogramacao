@@ -51,6 +51,7 @@
                             <option value="g">Grama</option>
                             <option value="l">Litro</option>
                             <option value="ml">Militro</option>
+                            <option value="uni">Unidade</option>
                         </select>
                     </div>
                     <div>

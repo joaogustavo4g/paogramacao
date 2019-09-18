@@ -21,6 +21,7 @@
     </div>
     <div>
         <?php
+        setcookie("id");
         include '../server/connection.php';
         $conn = getConnection();
         $sql = 'SELECT * FROM produto';
@@ -36,22 +37,30 @@
                 <tbody>';
         foreach ($conn->query($sql) as $row) {
             echo '<tr>
-            <td>' . $row['Nome'] . '</td>
-            <td>' . $row['Descricao'] . '</td>
-            <td>R$ ' . $row['PrecoCusto'] . '</td>
-            <td>
+                <td>' . $row['Nome'] . '</td>
+                <td>' . $row['Descricao'] . '</td>
+                <td>R$ ' . $row['PrecoCusto'] . '</td>
+                <td>
+                    <form action="./IngredientsProduct.php" method="POST">
+                    <input type="hidden" name="IdProduto" value="' . $row["IdProduto"] . '">
+                    <input type="submit" class="button" name="Enviar" value="Adicionar Ingredientes">
+                    </form>
+                    <form action="./Ingredients.php" method="POST">
+                    <input type="hidden" name="IdProduto" value="' . $row["IdProduto"] . '">
+                    <input type="submit" class="button" name="Enviar" value="Visualizar Ingredientes">
+                    </form>
+                </td>
+                <td>
                 <form action="./editProduct.php" method="POST">
                 <input type="hidden" name="IdProduto" value="' . $row["IdProduto"] . '">
                 <input type="submit" class="button" name="Enviar" value="Editar">
                 </form>
-            </td>
-            <td>
-                <form action="./controllers/delete.php" method="POST">
-                <input type="hidden" name="IdProduto" value="' . $row["IdProduto"] . '">
-                <input type="submit" class="button" name="Enviar" value="Deletar">
-                </form>
-            </td>
-                    </tr>';
+                    <form action="./controllers/delete.php" method="POST">
+                    <input type="hidden" name="IdProduto" value="' . $row["IdProduto"] . '">
+                    <input type="submit" class="button" name="Enviar" value="Deletar">
+                    </form>
+                </td>
+            </tr>';
         }
         echo '   
             </tbody>
