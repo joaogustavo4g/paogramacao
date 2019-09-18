@@ -13,7 +13,7 @@
     <div class="header">
         <a href="../../Index.html" class="logo">Pão Gramação</a>
         <div class="header-right">
-            <a class="active" href="">Adionar Igredientes</a>
+            <a class="active" href="">Visualizando os Igredientes</a>
             <a href="../../Index.html">Voltar</a>
         </div>
     </div>
