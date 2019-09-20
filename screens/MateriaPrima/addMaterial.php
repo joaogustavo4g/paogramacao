@@ -29,23 +29,23 @@
                         <label for="name">Nome da Materia Prima</label>
                     </div>
                     <div class="input-field inline">
-                        <input id="preco_custo" data-length="10" name="preco_custo" type="number" class="validate p">
+                        <input id="preco_custo" data-length="10" require name="preco_custo" pattern="[3-9]+$" type="number" class="validate p">
                         <label for="preco_custo">Preco (R$)</label>
                     </div>
 
                     <!-- Estoque -->
                     <div class="input-field inline">
-                        <input id="QtdEstoque" data-length="10" name="QtdEstoque" type="number" class="validate p">
+                        <input id="QtdEstoque" data-length="10" require name="QtdEstoque" pattern="[1-9]+$" type="number" class="validate p">
                         <label for="QtdEstoque">Estoque (max)</label>
                     </div>
 
                     <div class="input-field inline">
-                        <input id="QtdEstoqueMinimo" data-length="10" name="QtdEstoqueMinimo" type="number" class="validate p">
+                        <input id="QtdEstoqueMinimo" data-length="10" require name="QtdEstoqueMinimo" pattern="[1-9]+$" type="number" class="validate p">
                         <label for="QtdEstoqueMinimo">Estoque (min)</label>
                     </div>
                     <!-- Unidade de medida -->
                     <div class="edit inline">
-                        <select class="browser-default " name="unidade">
+                        <select class="browser-default " name="unidade" require>
                             <option value="" disabled selected>Unidade de Medida</option>
                             <option value="kg">Kg</option>
                             <option value="g">Grama</option>

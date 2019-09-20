@@ -29,15 +29,15 @@
                         <label for="product_name">Nome do Produto</label>
                     </div>
                     <div class="input-field inline">
-                        <input id="preco_custo" data-length="10" name="preco_custo" type="number" class="validate p">
+                        <input id="preco_custo" data-length="10" pattern="[0-9]+$" require name="preco_custo" type="number" class="validate p">
                         <label for="preco_custo">Preco (R$)</label>
                     </div>
                     <div class="input-field inline">
-                        <input id="preco_lucro" data-length="10" name="preco_lucro" type="number" class="validate p">
+                        <input id="preco_lucro" data-length="10" pattern="[0-9]+$" require name="preco_lucro" type="number" class="validate p">
                         <label for="preco_lucro">Lucro (%)</label>
                     </div>
                     <div class="edit inline">
-                        <select class="browser-default " name="unidade">
+                        <select class="browser-default " name="unidade" require>
                             <option value="" disabled selected>Unidade de Medida</option>
                             <option value="kg">Kg</option>
                             <option value="g">Grama</option>

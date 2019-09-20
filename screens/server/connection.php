@@ -3,7 +3,7 @@ function getConnection()
 {
 
     $host = 'localhost'; //Host aonde esta o banco de dados
-    $dbname = 'db_PaoGramacao'; //Nome do banco de dados
+    $dbname = 'paogramacao'; //Nome do banco de dados
     $user = 'root'; // Usuario
     $pass = 'root'; // Senha
 
